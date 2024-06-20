@@ -4,7 +4,7 @@ import useToolkitStore from "@/hooks/useToolkitStore";
 import { ImageT } from "@/types/types";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { SingleImageDropzoneUsage } from "./single-image-upload";
+import { SingleImageUpload } from "./single-image-upload";
 import { Button } from "./ui/button";
 
 const UploadImage = () => {
@@ -47,7 +47,7 @@ const UploadImage = () => {
           transition={{ duration: 0.5, ease: "easeInOut" }}
           className="overflow-hidden"
         >
-          <SingleImageDropzoneUsage setShowDropZone={setShowDropZone} />
+          <SingleImageUpload setShowDropZone={setShowDropZone} />
         </motion.div>
       )}
     </>

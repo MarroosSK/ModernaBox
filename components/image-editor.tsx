@@ -5,7 +5,7 @@ import FilerobotImageEditor, {
 } from "react-filerobot-image-editor";
 import { Card } from "./ui/card";
 
-const DotMenu = () => {
+const ImageEditor = () => {
   const { setIsImgEditorShown, toolkitImage } = useToolkitStore();
 
   const handleSave = (editedImageObject: any) => {
@@ -49,4 +49,4 @@ const DotMenu = () => {
   );
 };
 
-export default DotMenu;
+export default ImageEditor;

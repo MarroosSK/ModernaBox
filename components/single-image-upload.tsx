@@ -10,7 +10,7 @@ import { SingleImageDropzone } from "./single-image-dropzone";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 
-export function SingleImageDropzoneUsage({ setShowDropZone }: any) {
+export function SingleImageUpload({ setShowDropZone }: any) {
   const router = useRouter();
   const [file, setFile] = useState<File>();
   const [uploadProgress, setUploadProgress] = useState<number>(0);
@@ -55,7 +55,7 @@ export function SingleImageDropzoneUsage({ setShowDropZone }: any) {
           <div className="flex flex-col gap-y-2">
             <div className="flex gap-2">
               <Input
-                placeholder="Minimum of 1 keyword"
+                placeholder="Min 1 keyword"
                 value={currentKeyword}
                 onChange={handleKeywordChange}
               />
@@ -72,14 +72,14 @@ export function SingleImageDropzoneUsage({ setShowDropZone }: any) {
           {keywords.map((keyword) => (
             <div
               key={keyword}
-              className="flex items-center bg-gray-200 px-2 py-1 rounded"
+              className="flex items-center bg-transparent border border-black dark:border-white px-2 py-1 rounded text-primary"
             >
               {keyword}
               <button
                 onClick={() => handleRemoveKeyword(keyword)}
                 className="ml-1"
               >
-                <X size={16} />
+                <X size={16} className="text-red-500" />
               </button>
             </div>
           ))}
@@ -98,7 +98,7 @@ export function SingleImageDropzoneUsage({ setShowDropZone }: any) {
                     setUploadProgress(progress);
                     // console.log(progress);
                     toast(
-                      <div className="flex items-center gap-2 text-black">
+                      <div className="flex items-center gap-2 text-black dark:text-white">
                         <Loader2 className="animate-spin" />{" "}
                         <span className="text-lg">Uploading...</span>
                       </div>,

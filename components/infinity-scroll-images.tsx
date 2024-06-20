@@ -1,15 +1,15 @@
 "use client";
 
-import { useEffect, useState, useCallback, Suspense } from "react";
+import { getImages } from "@/actions/get-images";
+import useToolkitStore from "@/hooks/useToolkitStore";
+import { ImageT } from "@/types/types";
+import { Loader2 } from "lucide-react";
+import { Suspense, useCallback, useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import ImageBox from "./image-box";
-import { getImages } from "@/actions/get-images";
-import { Loader2 } from "lucide-react";
+import ImageEditor from "./image-editor";
 import ImageModal from "./image-modal";
 import ImagesLoad from "./images-load-skeleton";
-import DotMenu from "./dot-menu";
-import { ImageT } from "@/types/types";
-import useToolkitStore from "@/hooks/useToolkitStore";
 
 export default function InfiniteScrollImages({
   search,
@@ -104,7 +104,7 @@ export default function InfiniteScrollImages({
           <ImageModal id={modalImage} setModalOpen={setModalOpen} />
         </Suspense>
       )}
-      {toolkitImage && isImgEditorShown && <DotMenu />}
+      {toolkitImage && isImgEditorShown && <ImageEditor />}
     </div>
   );
 }
