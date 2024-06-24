@@ -7,9 +7,13 @@ import { Loader2 } from "lucide-react";
 import { Suspense, useCallback, useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import ImageBox from "./image-box";
-import ImageEditor from "./image-editor";
 import ImageModal from "./image-modal";
 import ImagesLoad from "./images-load-skeleton";
+import dynamic from "next/dynamic";
+
+const ImageEditor = dynamic(() => import("./image-editor"), {
+  ssr: false,
+});
 
 export default function InfiniteScrollImages({
   search,

@@ -1,5 +1,6 @@
 import { ArrowRight, Check } from "lucide-react";
 import { Button } from "../ui/button";
+import Link from "next/link";
 
 const PricingTile = ({
   plan,
@@ -34,10 +35,13 @@ const PricingTile = ({
       </div>
 
       <Button
-        className={` bg-transparent text-black hover:text-white dark:bg-secondary dark:text-white `}
+        asChild
+        className={` bg-transparent border text-black hover:text-white dark:bg-secondary dark:text-white `}
       >
-        <span className="text-med ">{CallToAction}</span>
-        <ArrowRight />
+        <Link href="/images" className="text-med ">
+          {CallToAction}
+          <ArrowRight />
+        </Link>
       </Button>
     </div>
   );
