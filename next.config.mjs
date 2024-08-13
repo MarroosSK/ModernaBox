@@ -1,7 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["files.edgestore.dev"],
+    remotePatterns: [
+      {
+        hostname: "files.edgestore.dev",
+        port: "",
+      },
+    ],
   },
 };
 
