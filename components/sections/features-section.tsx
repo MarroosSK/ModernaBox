@@ -8,9 +8,7 @@ import {
   Folder,
   GitBranch,
   Languages,
-  Layout,
   Sun,
-  SwatchBook,
   X,
 } from "lucide-react";
 
@@ -31,15 +29,13 @@ export const FeaturesSection = () => {
     { icon: <X />, title: `No user tracking or advertising` },
     { icon: <Languages />, title: `Available in 2 languages` },
     { icon: <Earth />, title: `Sign in with GitHub, Google, ...` },
-    { icon: <File />, title: `Design images` },
+    { icon: <File />, title: `Customize images` },
     { icon: <Folder />, title: `Change image format` },
-    { icon: <SwatchBook />, title: `Customisable colour palettes` },
-    { icon: <Layout />, title: `Customisable layouts` },
     { icon: <Sun />, title: `Light or dark theme` },
   ];
 
   return (
-    <section id="features" className="relative bg-accent py-24 sm:py-32">
+    <section id="features" className="relative bg-indigo-400 py-24 sm:py-32">
       <div className="container">
         <div className="space-y-6 leading-loose">
           <h2 className="text-4xl font-bold">{`Rich in features, not in pricing.`}</h2>

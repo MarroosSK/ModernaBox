@@ -8,7 +8,6 @@ import {
 } from "../ui/accordion";
 import { Button } from "../ui/button";
 
-// Who are you, and why did you build Reactive Resume?
 const Question1 = () => (
   <AccordionItem value="1">
     <AccordionTrigger className="text-left leading-relaxed">
@@ -24,7 +23,6 @@ const Question1 = () => (
   </AccordionItem>
 );
 
-// How much does it cost to run Reactive Resume?
 const Question2 = () => (
   <AccordionItem value="2">
     <AccordionTrigger className="text-left leading-relaxed">
@@ -39,7 +37,6 @@ const Question2 = () => (
   </AccordionItem>
 );
 
-// Other than donating, how can I support you?
 const Question3 = () => (
   <AccordionItem value="3">
     <AccordionTrigger className="text-left leading-relaxed">
@@ -54,7 +51,6 @@ const Question3 = () => (
   </AccordionItem>
 );
 
-// How does the OpenAI Integration work?
 const Question5 = () => (
   <AccordionItem value="5">
     <AccordionTrigger className="text-left leading-relaxed">
@@ -73,10 +69,6 @@ export const FAQSection = () => (
         <h2 className="text-4xl font-bold">Frequently Asked Questions</h2>
 
         <p className="text-base leading-loose">
-          Here are some questions often asked about ModernaBox.
-        </p>
-
-        <p className="text-sm leading-loose">
           If you did not find your answer, feel free to contact support.
         </p>
         <Button>Contact Support</Button>

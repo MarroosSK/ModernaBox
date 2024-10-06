@@ -21,14 +21,14 @@ const testimonials: Testimonial[][] = [
   ],
   [
     {
-      name: "Anonym1",
+      name: "Anonym2",
       quote:
         "Hey, Just wanted to let you know i am using this app everyday, because i like it. It's great!",
     },
   ],
   [
     {
-      name: "Anonym2",
+      name: "Anonym3",
       quote: "Thank you so much for making this kind of thing.",
     },
   ],
@@ -69,10 +69,6 @@ export const TestimonialsSection = () => (
                 index > 0 && "hidden lg:block"
               )}
             >
-              <Quote
-                size={64}
-                className="absolute -right-3 bottom-0 opacity-20"
-              />
               <blockquote className="italic leading-relaxed">
                 &ldquo;{testimonial.quote}&rdquo;
               </blockquote>

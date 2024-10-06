@@ -29,7 +29,7 @@ const UploadImage = () => {
       </Button>
       {!showDropZone ? (
         <Button className="w-full mb-3" onClick={() => setShowDropZone(true)}>
-          From image
+          Upload image
         </Button>
       ) : (
         <Button

@@ -20,16 +20,6 @@ const Footer = () => {
 
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4 lg:col-span-2">
             <div className="text-center sm:text-left">
-              <p className="text-lg font-medium">About</p>
-
-              <ul className="mt-8 space-y-4 text-sm">
-                <li>
-                  <Link href="#">History</Link>
-                </li>
-              </ul>
-            </div>
-
-            <div className="text-center sm:text-left">
               <p className="text-lg font-medium">Services</p>
 
               <ul className="mt-8 space-y-4 text-sm">

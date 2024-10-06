@@ -21,19 +21,8 @@ export const HeroSection = () => (
         initial={{ opacity: 0, x: -100 }}
         whileInView={{ opacity: 1, x: 0 }}
       >
-        <div className="hidden items-center gap-x-4 sm:flex">
-          <Badge>{`Version 1.0`}</Badge>
-
-          <a
-            href="#"
-            className={cn(
-              buttonVariants({ variant: "link" }),
-              "space-x-2 text-left"
-            )}
-          >
-            <p>{`What's new in the latest version`}</p>
-            <ArrowRight />
-          </a>
+        <div>
+          <Badge>Version 1.0</Badge>
         </div>
 
         <div className="mt-10 space-y-2">
